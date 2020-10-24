@@ -12,17 +12,10 @@ input{
 	box-sizing: border-box;
 }
 page{
-	/* 主题色 */
-	--themeColor: #eb4450;
 	/* 字体大小 */
 	font-size: 28rpx;
-	background-color: #007AFF;
 }
 image{
 	width: 100%;
 	display: block;
-}
-/* 主题色 */
-.theme-color{
-	color: var(--themeColor);
 }

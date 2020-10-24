@@ -1,0 +1,16 @@
+{
+  "id": "2145180",
+  "name": "uniapp-01",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "uniapp练习项目",
+  "glyphs": [
+    {
+      "icon_id": "2135585",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
