@@ -65,8 +65,6 @@ export default {
 				this.current = e.currentIndex;
 			}
 		}
-	},
-	async onLoad() {
 	}
 }
 </script>

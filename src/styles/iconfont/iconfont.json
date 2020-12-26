@@ -6,6 +6,13 @@
   "description": "uniapp练习项目",
   "glyphs": [
     {
+      "icon_id": "9825343",
+      "name": "Micon08-评论",
+      "font_class": "Micon-pinglun",
+      "unicode": "e917",
+      "unicode_decimal": 59671
+    },
+    {
       "icon_id": "2135585",
       "name": "搜索",
       "font_class": "sousuo",

@@ -9,14 +9,12 @@
 		onHide: function() {
 			console.log('App Hide')
 		},
-		globalData: {
-			base: 'www.heihei.com'
-		}
+		globalData: {}
 	}
 </script>
 
-<style>
+<style lang="scss">
 /*每个页面公共css */
 @import "./styles/base.wxss";
-@import "./styles/iconfont/iconfont.wxss"
+@import "./styles/iconfont/iconfont.wxss";
 </style>

@@ -6,7 +6,7 @@
 	v-if="recommend.length">
 		<!-- 推荐 -->
 		<view class="recommend-wrap">
-			<view 
+			<view
 			class="recommend-item"
 			v-for="item in recommend"
 			:key="item.id">
@@ -30,10 +30,12 @@
 			<view class="months-content">
 				<view 
 				class="content-item"
-				v-for="item in months.items"
+				v-for="(item, index) in months.items"
 				:key="item.id">
-					<!-- 这里后台接口设置的就是可以在前端控制图片高度 -->
-					<image mode="aspectFill" :src="item.thumb+item.rule.replace('$<Height>','360')"></image>
+					<go-detail :list="months.items" :index="index">
+						<!-- 这里后台接口设置的就是可以在前端控制图片高度 -->
+						<image mode="aspectFill" :src="item.thumb+item.rule.replace('$<Height>','360')"></image>
+					</go-detail>
 				</view>
 			</view>
 		</view>
@@ -45,9 +47,11 @@
 			<view class="hots-content">
 				<view 
 				class="hots-item"
-				v-for="item in hots"
+				v-for="(item, index) in hots"
 				:key="item.id">
-					<image mode="aspectFill" :src="item.thumb"></image>
+					<go-detail :list="hots" :index="index">
+						<image mode="aspectFill" :src="item.thumb"></image>
+					</go-detail>
 				</view>
 			</view>
 		</view>
@@ -56,7 +60,12 @@
 
 <script>
 import moment from 'moment'
+// @代表src目录
+import goDetail from '@/components/goDetail.vue'
 export default {
+	components: {
+		goDetail
+	},
 	data() {
 		return {
 			// 推荐
@@ -76,6 +85,11 @@ export default {
 		}
 	},
 	async mounted() {
+		// 动态修改页面标题
+		uni.setNavigationBarTitle({
+		    title: '首页'
+		})
+		
 		const result = await this.getHotsList()
 		
 		// 推荐
@@ -94,7 +108,7 @@ export default {
 		// 获取热门数据
 		getHotsList() {
 			return	this.request({
-				url: 'v3/homepage/vertical',
+				url: 'image/v3/homepage/vertical',
 				data: this.params
 			})
 		},

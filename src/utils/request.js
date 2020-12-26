@@ -5,7 +5,7 @@ export default (params) => {
 	})
 	
 	// 定义公共的url
-	const baseUrl = 'http://157.122.54.189:9088/image/'
+	const baseUrl = 'http://157.122.54.189:9088/'
 	
 	return new Promise((resolve, reject) => {
 		wx.request({
