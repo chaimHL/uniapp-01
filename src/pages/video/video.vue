@@ -41,7 +41,7 @@
 				items: [
 					{ title: '推荐', url: 'videoimg/v1/videowp/featured', params: { limit: 30, skip: 0, order: 'hot' } },
 					{ title: '娱乐', url: 'videoimg/v1/videowp/category/59b25abbe7bce76bc834198a', params: { limit: 30, skip: 0, order: 'new' } },
-					{ title: '最新', url: 'videoimg/v1/videoimg/v1/videowp/videowp', params: { limit: 30, skip: 0, order: 'new' } },
+					{ title: '最新', url: 'videoimg/v1/videowp/videowp', params: { limit: 30, skip: 0, order: 'new' } },
 					{ title: '热门', url: 'videoimg/v1/videowp/videowp', params: { limit: 30, skip: 0, order: 'hot' } },
 					{ title: '分类', url: 'videoimg/v1/videowp/category', params: {} }
 				],
